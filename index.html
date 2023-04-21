@@ -12,15 +12,17 @@
         <h1 class="heading">Rock Paper Scissors Lizard Spock</h1>
         <div class="score">Score: <span id="player-score">0</span> - <span id="computer-score">0</span></div>
         <div class="options">
-          <button class="rock">Rock</button>
-          <button class="paper">Paper</button>
-          <button class="scissors">Scissors</button>
-          <button class="lizard">Lizard</button>
-          <button class="spock">Spock</button>
+          <button class="rock" onclick="play('rock')">Rock</button>
+          <button class="paper" onclick="play('paper')">Paper</button>
+          <button class="scissors" onclick="play('scissors')">Scissors</button>
+          <button class="lizard" onclick="play('lizard')">Lizard</button>
+          <button class="spock" onclick="play('spock')">Spock</button>
         </div>
         <div class="result" id="result"></div>
-        <button class="restart">Restart</button>
+        <button class="restart" onclick="restart()">Restart</button>
       </div>
+  
+  
     <script src="assets/js/script.js"></script>
 </body>
 </html>
