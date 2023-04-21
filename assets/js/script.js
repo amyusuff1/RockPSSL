@@ -1,27 +1,15 @@
-/**
- * Options and scores
- */
-
+//// Define options and scores
 const options = ["rock", "paper", "scissors", "lizard", "spock"];
 let playerScore = 0;
 let computerScore = 0;
 
-/** 
- * function to play the game 
- */
+// Function to play the game
 function play(playerChoice) {
-/**
- * selects computeres choice
- */
-    const computerChoice = options[Math.floor(Math.random() * options.length)];
+  // Get computer's choice
+  const computerChoice = options[Math.floor(Math.random() * options.length)];
 
-}
-
-/**
- * To determine the winner and update scores
- */
-
-if (playerChoice == computerChoice) {
+  // Determine winner and update scores
+  if (playerChoice == computerChoice) {
     document.getElementById("result").innerHTML = "It's a tie!";
   } else if (
     (playerChoice == "rock" && (computerChoice == "scissors" || computerChoice == "lizard")) ||
@@ -37,9 +25,16 @@ if (playerChoice == computerChoice) {
     computerScore++;
   }
 
-/**
- * fuction to restart the game
- */
-function restart() {
+  // Update scores
+  document.getElementById("player-score").innerHTML = playerScore;
+  document.getElementById("computer-score").innerHTML = computerScore;
+}
 
+// Function to restart the game
+function restart() {
+  playerScore = 0;
+  computerScore = 0;
+  document.getElementById("player-score").innerHTML = playerScore;
+  document.getElementById("computer-score").innerHTML = computerScore;
+  document.getElementById("result").innerHTML = "";
 }
